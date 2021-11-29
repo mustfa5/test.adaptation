@@ -1,0 +1,13 @@
+Package: test.adaptation
+Type: Package
+Title: adaptation - level of adaptation of a CAT
+Version: 0.1.0
+Author: Mustafa Yildiz <mustfa.yildz@gmail.com>
+Maintainer: Mustafa Yildiz <mustfa.yildz@gmail.com>
+Description: test.adaptation package is designed to help improve the quality of item pools for CATs. The pool quality indicators found in the literature will appear in test.adaptation as they get published. 
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Imports: 
+    catR
