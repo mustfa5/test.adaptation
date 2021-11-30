@@ -4,7 +4,7 @@ Title: Adaptation - level of adaptation of a computerized adaptive test
 Version: 0.1.0
 Author: Mustafa Yildiz <mustfa.yildz@gmail.com>
 Maintainer: Mustafa Yildiz <mustfa.yildz@gmail.com>
-Description: test.adaptation package is designed to help improve the quality of item pools for CATs. The pool quality indicators found in the literature will appear in test.adaptation package as they get published. 
+Description: test.adaptation package is designed to help improve the quality of item pools for computerized adaptive tests. The pool quality indicators found in the literature will appear in test.adaptation package as they get published. 
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
