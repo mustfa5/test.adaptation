@@ -24,7 +24,7 @@
 #'bank=genDichoMatrix(items =bank, cbControl = NULL,
 #'                    model = model)
 #'
-#'res <- simulateRespondents(thetas = theta, bank,
+#'res <-simulateRespondents(thetas = theta, bank,
 #'                           start = start, test = test, stop = stop,
 #'                           final = final, model = NULL)
 #'
