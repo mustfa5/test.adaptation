@@ -2,7 +2,7 @@
 % Please edit documentation in R/DOD.R
 \name{DOD}
 \alias{DOD}
-\title{This function calculates the devation of difficulty (DOD) index as described in Ju and Reckase (2019)}
+\title{This function calculates the deviation of difficulty (DOD) index as described in Ju and Reckase (2019)}
 \usage{
 DOD(estimated.theta, bank, items.administered, ni)
 }
@@ -19,7 +19,7 @@ DOD(estimated.theta, bank, items.administered, ni)
 This function returns a list with two outputs. (1) average ROI for the entire CAT administration and (2) ROI at individual level
 }
 \description{
-This function calculates the devation of difficulty (DOD) index as described in Ju and Reckase (2019)
+This function calculates the deviation of difficulty (DOD) index as described in Ju and Reckase (2019)
 }
 \examples{
 library(catR)
