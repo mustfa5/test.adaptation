@@ -54,7 +54,6 @@ DOD <- function(estimated.theta,bank,items.administered,ni) {
   }
   return(list(DOD.data=out,DOD.summary=summary(rowMeans(out, na.rm = T)), DOD=mean(rowMeans(out, na.rm = T), na.rm = T)))
 }
-xx=DOD(estimated.theta,items.administered, bank, ni=35)
 
 
 
