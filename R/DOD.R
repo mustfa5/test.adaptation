@@ -36,31 +36,33 @@
 
 
 DOD <- function(estimated.theta,bank,items.administered,ni) {
-  require(catR)
-  if(missing(ni)) {
-    warning("The ni was not provided hence a default value of 1 was used")}
+  out=matrix(NA,nrow  = dim(estimated.theta)[1], ncol = dim(estimated.theta)[2])
 
-  if(missing(ni))
-    ni<-NULL
-  if(is.null(ni)) {
-    ni<-1
-  } else {
-    ni
+  for (i in 1:dim(estimated.theta)[1]) {
+    print(paste("i=",i))
+    Lj=length(estimated.theta[i,])[]
+    c1=1/(Lj-ni)
+    liste=as.numeric(as.character(items.administered[i,]))
+    for (k in (ni+1):Lj) {
+      uygulananlar=bank[liste[(ni+1):k],2]
+      uygulanmayanlar=bank[-c((ni+1):k),2]
+      hesaplananlar=as.numeric(as.character(estimated.theta[i,ni:(k-1)]))
+      nom=mean(abs(as.numeric(as.character(uygulananlar-hesaplananlar))))
+      denom=mean(abs(uygulanmayanlar-estimated.theta[i,(k-1)]))
+      out[i,k]= c1*(1-(num/denom))
+      }
   }
-  ni <- 1
-  for (i in 1:dim(estimated.theta)[2]) {
-    Lj=dim(estimated.theta)[2]
-    out=matrix(NA,nrow  = Lj-1)
-    for (k in 2:Lj) {
-      c1=1/(Lj-ni)
-      uygulanan.madde.gucluk=bank[unlist(items.administered[i,1:k]),2]
-      uygulanmayan.madde.gucluk=bank[-c(unlist(items.administered[i,1:k])),2]
-      num=mean(abs(uygulanan.madde.gucluk-estimated.theta[i,k-1]))
-      denom=mean(abs(uygulanmayan.madde.gucluk-estimated.theta[i,k-1]))
-      out[k-1,]= c1*(1-num/denom)
-      DOD=mean(out)
-    }
-    print(DOD)
-
-  }
+  return(list(DOD.data=out,DOD.summary=summary(rowMeans(out, na.rm = T)), DOD=mean(rowMeans(out, na.rm = T), na.rm = T)))
 }
+xx=DOD(estimated.theta,items.administered, bank, ni=35)
+
+
+
+
+
+
+
+
+
+
+
