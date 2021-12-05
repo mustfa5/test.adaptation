@@ -47,7 +47,7 @@ DOD <- function(estimated.theta,bank,items.administered,ni) {
       uygulananlar=bank[liste[(ni+1):k],2]
       uygulanmayanlar=bank[-c((ni+1):k),2]
       hesaplananlar=as.numeric(as.character(estimated.theta[i,ni:(k-1)]))
-      nom=mean(abs(as.numeric(as.character(uygulananlar-hesaplananlar))))
+      num=mean(abs(as.numeric(as.character(uygulananlar-hesaplananlar))))
       denom=mean(abs(uygulanmayanlar-estimated.theta[i,(k-1)]))
       out[i,k]= c1*(1-(num/denom))
       }
