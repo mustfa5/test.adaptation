@@ -36,11 +36,11 @@
 #'   xx= as.numeric(items.administered[k,])
 #'   item.diff[k,]=bank[xx,2]
 #' }
-#' SDrat(item.diff,t.hat)
+#' SDrat(item.diff,theta.hat)
 
 
-SD.ratio <- function(item.diff,t.hat) {
+SD.ratio <- function(item.diff,theta.hat) {
   require(catR)
-  SD.ratio <- sd(item.diff)/sd(t.hat)
+  SD.ratio <- sd(item.diff)/sd(theta.hat)
   return(SD.ratio)
 }
