@@ -4,7 +4,7 @@
 \alias{SD.ratio}
 \title{This function calculates the ratio of standard deviations index as described in Reckase, Ju, and Kim (2019)}
 \usage{
-SD.ratio(item.diff, t.hat)
+SD.ratio(item.diff, theta.hat)
 }
 \arguments{
 \item{item.diff}{average item difficulties administered to a test taker during a computerized test administration}
@@ -45,7 +45,7 @@ for (k in 1:nrow(items.administered)) {
   xx= as.numeric(items.administered[k,])
   item.diff[k,]=bank[xx,2]
 }
-SDrat(item.diff,t.hat)
+SDrat(item.diff,theta.hat)
 }
 \references{
 Reckase, M. D., Ju, U., & Kim, S. (2019). How adaptive is an adaptive test: Are all adaptive tests adaptive?. Journal of Computerized Adaptive Testing, 7(1), 1-14.
