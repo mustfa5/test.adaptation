@@ -52,7 +52,7 @@ OOI <- function(theta,t.hat, items.administered, bank) {
     bank.sort=bank
     bank.sort$id=rownames(bank.sort)
     bank.sort$e=abs(bank$b-theta[i])
-    bank.sorted=arrange(bank.sort,e)[1:items,]
+    bank.sorted=arrange(bank.sort,e)[1:(dim(bank)[1]),]
     res[i,1]=IAj/sum(Ii(t.hat[i],bank.sorted[,1:4]) $Ii)
 
   }
