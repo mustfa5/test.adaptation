@@ -6,6 +6,7 @@
 #' @return This function returns a correlation value
 #' @export
 #' @importFrom catR Ii
+#' @importFrom stats cor
 #' @references
 #' Reckase, M. D., Ju, U., & Kim, S. (2019). How adaptive is an adaptive test: Are all adaptive tests adaptive?. Journal of Computerized Adaptive Testing, 7(1), 1-14.
 #' @examples

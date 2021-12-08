@@ -6,6 +6,7 @@
 #' @return This function returns a matrix of CPRV values in numeric form
 #' @export
 #' @importFrom catR Ii
+#' @importFrom stats var
 #' @references
 #' Ju, U., & Reckase, M. D. (2019). New conditional measures of the amount of adaptation of adaptive tests. Paper presented at the annual meeting of the National Council on Measurement in Education, Toronto, Canada.
 #' @examples
@@ -40,6 +41,7 @@
 
 CPRV <- function(diff, bank) {
   require(catR)
+  require(stats)
   s2b=var(bank[,2])
   s2bj=apply(diff,1,var)
   CPRV=(s2b-s2bj)/s2b

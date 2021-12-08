@@ -5,6 +5,7 @@
 #' @param bank A data matrix that have item parameters in the following order: discrimination, difficulty, guessing and slipping.
 #'
 #' @importFrom catR Ii
+#' @importFrom stats sd
 #' @return Returns a matrix for DM in which every row is the DM for each test taker
 #' @export
 #' @references
