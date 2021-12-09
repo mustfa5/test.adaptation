@@ -31,7 +31,8 @@
 #'
 #'estimated.theta=res$responses.df[,grepl("estimated.theta",names( res$responses.df ) ) ]
 #'items.administered=res$responses.df[,grepl("items.administrated",names( res$responses.df ) ) ]
-#' DOD(estimated.theta,items.administered, bank)
+#'ni=3
+#' DOD(estimated.theta,items.administered, bank, ni)
 
 
 

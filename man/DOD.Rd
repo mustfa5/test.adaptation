@@ -42,7 +42,8 @@ res <- simulateRespondents(thetas = theta, bank,
 
 estimated.theta=res$responses.df[,grepl("estimated.theta",names( res$responses.df ) ) ]
 items.administered=res$responses.df[,grepl("items.administrated",names( res$responses.df ) ) ]
-DOD(estimated.theta,items.administered, bank)
+ni=3
+DOD(estimated.theta,items.administered, bank, ni)
 }
 \references{
 Ju, U., & Reckase, M. D. (2019). New conditional measures of the amount of adaptation of adaptive tests. Paper presented at the annual meeting of the National Council on Measurement in Education, Toronto, Canada.
